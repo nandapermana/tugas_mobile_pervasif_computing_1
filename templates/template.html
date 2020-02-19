@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask bae</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Iseng2 nyoba flask</h1>
+        <strong><nav>
+          <ul class="menu">
+            <h4> ini hanya untuk testing doang </h4>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('map') }}">Create Map</a></li>
+            <li><a href="{{ url_for('view_map') }}">View Map</a></li>
+            <hr>
+            <h4>ini prototype sementara</h4>
+            <li><a href="{{ url_for('dashboard')}}">Dashboard </a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+  </body>
+</html>
